@@ -5,6 +5,9 @@ pygame.mixer.init()
 SCREEN_WIDTH  = 1200
 SCREEN_HEIGHT = 800
 BG_COLOR      = (100,100,255)
+LEVEL_SPEEDUP = 1.2
+POINTS        = 100
+POINT_SCALE   = 1
 
 # Player Details
 PLAYER_IMAGE  = pygame.image.load('assets/player.png')
@@ -23,6 +26,5 @@ BULLET_MAX    = 3
 ENEMY_IMAGE   = pygame.image.load('assets/enemy.png')
 ENEMY_SFX     = pygame.mixer.Sound('assets/enemyHit.mp3')
 ENEMY_SIZE    = 75
-ENEMY_SPEED   = 10
-enemy_drop    = 10
-enemy_dir     = 1
+ENEMY_SPEED   = 3
+ENEMY_DROP    = 10

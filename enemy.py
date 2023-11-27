@@ -15,6 +15,11 @@ class Enemy(Sprite):
         self.image = pygame.transform.scale(ENEMY_IMAGE, (ENEMY_SIZE, ENEMY_SIZE))
         self.rect  = self.image.get_rect()
 
+        # Set enemy values
+        self.speed     = ENEMY_SPEED
+        self.direction = 1
+        self.points    = POINTS
+
         # Set enemy spawnpoint
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
@@ -23,7 +28,7 @@ class Enemy(Sprite):
         self.x = float(self.rect.x)
     
     def update(self):
-        self.x += ENEMY_SPEED * enemy_dir
+        self.x += self.speed * self.direction
         self.rect.x = self.x
 
     def check(self):

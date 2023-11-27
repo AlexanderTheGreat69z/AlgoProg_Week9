@@ -2,8 +2,11 @@ import pygame
 from pygame.sprite import Sprite
 from settings import *
 
-class Player:
+class Player(Sprite):
     def __init__(self, main):
+
+        # Inherit Sprite
+        super().__init__()
 
         # Get screen details
         self.screen   = main.screen
